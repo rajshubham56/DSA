@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-public class firstOccurance {
+public class lastOccurance {
     static int binary_search(int[] nums,int st,int end,int target){
         int fo=-1;
         while(st<=end){
             int mid = st+(end-st)/2;
             if(nums[mid]==target){
                 fo=mid;
-                end = mid-1;
+                st = mid+1;
             }else if(nums[mid]>target){
                 end=mid-1;
             }else{
